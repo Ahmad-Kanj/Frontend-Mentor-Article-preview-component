@@ -1,12 +1,22 @@
 $(document).ready(function () {
+  $(window).on("orientationchange", function () {
+    if ($(window).width() > 1150) {
+      $(".triangle").hide();
+      $(".share").hide();
+      $(".shareButton").removeClass("colorToggle");
+      $(".shareButton").find("img").removeClass("shareToggle");
+      $(".profile").show();
+      $(".shareButton").show();
+      $(".share").removeClass("reset");
+    }
+  });
+
   $(window).resize(function () {
     if ($(window).width() > 1150) {
       $(".triangle").hide();
       $(".share").hide();
       $(".shareButton").removeClass("colorToggle");
       $(".shareButton").find("img").removeClass("shareToggle");
-    }
-    if ($(window).width() > 1150) {
       $(".profile").show();
       $(".shareButton").show();
       $(".share").removeClass("reset");
