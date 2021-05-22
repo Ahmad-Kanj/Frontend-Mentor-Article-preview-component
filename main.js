@@ -8,6 +8,7 @@ $(document).ready(function () {
       $(".profile").show();
       $(".shareButton").show();
       $(".share").removeClass("reset");
+      $(".shareButton2").hide();
     }
   });
 
@@ -20,11 +21,14 @@ $(document).ready(function () {
       $(".profile").show();
       $(".shareButton").show();
       $(".share").removeClass("reset");
+      $(".shareButton2").hide();
     }
   });
+
   $(".triangle").hide();
   $(".share").hide();
-  $(".shareButton").click(function () {
+
+  $(".shareButton, .shareButton2").click(function () {
     if ($(window).width() > 1150) {
       $(".triangle").fadeToggle(200);
       $(".share").fadeToggle(200);
@@ -32,6 +36,7 @@ $(document).ready(function () {
       $(".shareButton").find("img").toggleClass("shareToggle");
     }
     if ($(window).width() < 1150) {
+      $(".shareButton2").show(1);
       $(".shareButton").show(1);
       $(".profile").toggle();
       $(".share").toggle(1);
