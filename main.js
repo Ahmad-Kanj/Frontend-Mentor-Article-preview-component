@@ -1,9 +1,16 @@
 $(document).ready(function () {
   $(window).resize(function () {
-    $(".triangle").hide();
-    $(".share").hide();
-    $(".shareButton").removeClass("colorToggle");
-    $(".shareButton").find("img").removeClass("shareToggle");
+    if ($(window).width() > 1150) {
+      $(".triangle").hide();
+      $(".share").hide();
+      $(".shareButton").removeClass("colorToggle");
+      $(".shareButton").find("img").removeClass("shareToggle");
+    }
+    if ($(window).width() > 1150) {
+      $(".profile").show();
+      $(".shareButton").show();
+      $(".share").removeClass("reset");
+    }
   });
   $(".triangle").hide();
   $(".share").hide();
@@ -15,7 +22,7 @@ $(document).ready(function () {
       $(".shareButton").find("img").toggleClass("shareToggle");
     }
     if ($(window).width() < 1150) {
-      $(".shareButton").fadeToggle(1);
+      $(".shareButton").show(1);
       $(".profile").toggle();
       $(".share").toggle(1);
       $(".share").toggleClass("reset");

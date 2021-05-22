@@ -122,6 +122,7 @@ body {
 
 .container {
   position: relative;
+  margin: 1rem;
 }
 
 .triangle {
