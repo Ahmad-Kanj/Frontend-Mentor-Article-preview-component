@@ -13,16 +13,14 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    if ($(window).width() > 1150) {
-      $(".triangle").hide();
-      $(".share").hide();
-      $(".shareButton").removeClass("colorToggle");
-      $(".shareButton").find("img").removeClass("shareToggle");
-      $(".profile").show();
-      $(".shareButton").show();
-      $(".share").removeClass("reset");
-      $(".shareButton2").hide();
-    }
+    $(".triangle").hide();
+    $(".share").hide();
+    $(".shareButton").removeClass("colorToggle");
+    $(".shareButton").find("img").removeClass("shareToggle");
+    $(".profile").show();
+    $(".shareButton").show();
+    $(".share").removeClass("reset");
+    $(".shareButton2").hide();
   });
 
   $(".triangle").hide();
